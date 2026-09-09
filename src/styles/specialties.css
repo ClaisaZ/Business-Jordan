@@ -1,0 +1,420 @@
+.specialties {
+  padding: 5rem 8%;
+  background: #0b0b0b;
+  color: #f5f5f5;
+}
+
+.specialties__header {
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+.specialties__eyebrow {
+  margin-bottom: 1rem;
+
+  color: #9be564;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.specialties__title {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+
+.specialties__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.specialty-card {
+  min-height: 190px;
+
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  gap: 1.5rem;
+
+  padding: 1.75rem;
+
+  border: 1px solid #242424;
+  border-radius: 1.5rem;
+
+  background: #111;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-6px);
+  border-color: #9be564;
+}
+
+.specialty-card__content {
+  align-self: center;
+}
+
+.specialty-card__title {
+  margin-bottom: 0.5rem;
+
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.specialty-card__description {
+  margin-bottom: 0;
+
+  color: #b8b8b8;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.specialty-card__visual {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialty-card__visual-circle {
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  border: 2px solid #9be564;
+  border-radius: 50%;
+
+  opacity: 0.8;
+}
+
+.specialty-card__visual-line {
+  position: absolute;
+
+  width: 70px;
+  height: 2px;
+
+  background: #9be564;
+
+  transform: rotate(-35deg);
+}
+
+.specialty-card__visual--strength {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.specialty-card__visual--strength span {
+  width: 10px;
+
+  border-radius: 999px;
+
+  background: #9be564;
+}
+
+.specialty-card__visual--strength span:nth-child(1) {
+  height: 40px;
+}
+
+.specialty-card__visual--strength span:nth-child(2) {
+  height: 70px;
+}
+
+.specialty-card__visual--strength span:nth-child(3) {
+  height: 100px;
+}
+
+.specialty-card__visual--mobility {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.specialty-card__visual--mobility span {
+  position: absolute;
+
+  border: 2px solid #9be564;
+  border-radius: 50%;
+}
+
+.specialty-card__visual--mobility span:nth-child(1) {
+  width: 90px;
+  height: 90px;
+
+  border-right-color: transparent;
+}
+
+.specialty-card__visual--mobility span:nth-child(2) {
+  width: 60px;
+  height: 60px;
+
+  border-left-color: transparent;
+}
+
+.specialty-card__visual--mobility span:nth-child(3) {
+  width: 18px;
+  height: 18px;
+
+  background: #9be564;
+  border: none;
+}
+
+.specialty-card__visual--performance {
+  position: relative;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.specialty-card__visual--performance span {
+  height: 3px;
+
+  border-radius: 999px;
+
+  background: #9be564;
+
+  transform: skewX(-30deg);
+}
+
+.specialty-card__visual--performance span:nth-child(1) {
+  width: 55px;
+}
+
+.specialty-card__visual--performance span:nth-child(2) {
+  width: 85px;
+}
+
+.specialty-card__visual--performance span:nth-child(3) {
+  width: 65px;
+}
+
+@media (max-width: 900px) {
+  .specialties {
+    padding: 4.5rem 6%;
+  }
+
+  .specialties__title {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+  }
+
+  .specialties__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .specialty-card {
+    min-height: 170px;
+    grid-template-columns: 1fr 100px;
+    padding: 1.5rem;
+  }
+
+  .specialty-card__visual {
+    width: 100px;
+    height: 100px;
+  }
+
+  .specialty-card__visual-circle {
+    width: 75px;
+    height: 75px;
+  }
+
+  .specialty-card__visual-line {
+    width: 60px;
+  }
+
+  .specialty-card__visual--strength {
+    width: 100px;
+    height: 100px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(1) {
+    height: 32px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(2) {
+    height: 55px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(3) {
+    height: 78px;
+  }
+
+  .specialty-card__visual--mobility {
+    width: 100px;
+    height: 100px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(1) {
+    width: 75px;
+    height: 75px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(2) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(3) {
+    width: 16px;
+    height: 16px;
+  }
+
+  .specialty-card__visual--performance {
+    width: 100px;
+    height: 100px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(1) {
+    width: 45px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(2) {
+    width: 70px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(3) {
+    width: 55px;
+  }
+}
+
+@media (max-width: 500px) {
+  .specialties {
+    padding: 4rem 5%;
+  }
+
+  .specialties__eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .specialties__title {
+    font-size: clamp(2.4rem, 12vw, 3.3rem);
+  }
+
+  .specialty-card {
+    grid-template-columns: 1fr 80px;
+    gap: 1rem;
+
+    padding: 1.35rem;
+  }
+
+  .specialty-card__title {
+    font-size: 1.4rem;
+  }
+
+  .specialty-card__description {
+    font-size: 0.95rem;
+  }
+
+  .specialty-card__visual {
+    width: 80px;
+    height: 80px;
+  }
+
+  .specialty-card__visual-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .specialty-card__visual-line {
+    width: 48px;
+  }
+
+  .specialty-card__visual--strength {
+    width: 80px;
+    height: 80px;
+
+    gap: 0.35rem;
+  }
+
+  .specialty-card__visual--strength span {
+    width: 8px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(1) {
+    height: 25px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(2) {
+    height: 42px;
+  }
+
+  .specialty-card__visual--strength span:nth-child(3) {
+    height: 60px;
+  }
+
+  .specialty-card__visual--mobility {
+    width: 80px;
+    height: 80px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(1) {
+    width: 60px;
+    height: 60px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(2) {
+    width: 40px;
+    height: 40px;
+  }
+
+  .specialty-card__visual--mobility span:nth-child(3) {
+    width: 12px;
+    height: 12px;
+  }
+
+  .specialty-card__visual--performance {
+    width: 80px;
+    height: 80px;
+
+    gap: 0.5rem;
+  }
+
+  .specialty-card__visual--performance span {
+    height: 2px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(1) {
+    width: 35px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(2) {
+    width: 55px;
+  }
+
+  .specialty-card__visual--performance span:nth-child(3) {
+    width: 42px;
+  }
+}

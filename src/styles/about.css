@@ -1,0 +1,103 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+
+  padding: 6rem 8%;
+
+  background: #f5f5f5;
+  color: #0b0b0b;
+}
+
+.about__intro {
+  max-width: 600px;
+}
+
+.about__eyebrow {
+  margin-bottom: 1rem;
+
+  color: #5a8f32;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about__title {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 0.95;
+}
+
+.about__content {
+  max-width: 600px;
+
+  align-self: end;
+}
+
+.about__lead {
+  margin-bottom: 1.25rem;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.about__description {
+  margin-bottom: 0;
+
+  color: #555;
+
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    padding: 5rem 6%;
+  }
+
+  .about__content {
+    max-width: 100%;
+  }
+
+  .about__title {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+    line-height: 0.98;
+  }
+
+  .about__lead {
+    margin-bottom: 1.25rem;
+
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .about__description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    padding: 4rem 5%;
+  }
+
+  .about__eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .about__title {
+    font-size: clamp(2.4rem, 12vw, 3.3rem);
+  }
+
+  .about__lead {
+    font-size: 1.1rem;
+  }
+}
