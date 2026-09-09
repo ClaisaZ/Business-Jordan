@@ -30,8 +30,9 @@ function CTASection() {
                 </Link>
 
                 <div className="cta__visual" aria-hidden="true">
-                    <span className="cta__visual-circle" />
-                    <span className="cta__visual-arrow">→</span>
+                    <div className="cta__visual-circle">
+                        <span className="cta__visual-arrow">→</span>
+                    </div>
                 </div>
             </div>
         </section>
