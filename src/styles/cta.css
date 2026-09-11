@@ -1,22 +1,18 @@
 .cta {
-  position: relative;
-  overflow: hidden;
-
   display: grid;
   grid-template-columns: 1fr 0.55fr;
-  align-items: end;
-  gap: 2rem;
+  align-items: center;
+  gap: 3rem;
 
-  padding: 6rem 8%;
+  padding: 5rem 8%;
 
   background: #9be564;
   color: #0b0b0b;
 }
 
-.cta__content {
-  position: relative;
-  z-index: 2;
+/* LEFT SIDE */
 
+.cta__content {
   max-width: 900px;
 }
 
@@ -46,37 +42,34 @@
   line-height: 1.65;
 }
 
-.cta__action {
-  position: relative;
-  z-index: 2;
+/* RIGHT SIDE */
 
+.cta__action {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-
-  min-height: 220px;
-
-  padding-bottom: 0;
 }
 
 .cta__action-label {
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.7rem;
 
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.08em;
+  text-align: center;
   text-transform: uppercase;
-  padding-left: 0.7rem;
 }
 
+/* BUTTON */
+
 .cta__button {
+  min-height: 52px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-
-  min-height: 52px;
 
   padding: 0.95rem 1.5rem;
 
@@ -89,103 +82,51 @@
   text-decoration: none;
 
   transition:
-    transform 0.4s ease,
-    background-color 0.2s ease;
+    transform 0.2s ease,
+    gap 0.2s ease;
 }
 
 .cta__button:hover {
   transform: translateY(-2px);
+  gap: 1rem;
 }
 
-.cta__visual {
-  position: absolute;
+/* TABLET */
 
-  right: -7%;
-  top: 55%;
-
-  width: 180px;
-  height: 180px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transform: translateY(-50%);
-
-  opacity: 0.18;
-
-  pointer-events: none;
-}
-
-.cta__visual-circle {
-  position: absolute;
-
-  width: 120px;
-  height: 120px;
-
-  border: 2px solid #0b0b0b;
-  border-radius: 50%;
-}
-
-.cta__visual-arrow {
-  position: relative;
-  z-index: 1;
-
-  transform: translateY(-4px);
-
-  font-size: 4.5rem;
-  font-weight: 400;
-  line-height: 1;
-  padding-bottom: 0.5rem;
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
   .cta {
     grid-template-columns: 1fr;
-    align-items: start;
     gap: 2.5rem;
 
-    padding: 5rem 6%;
+    padding: 4.5rem 6%;
   }
 
   .cta__title {
-    font-size: clamp(2.8rem, 11vw, 4.5rem);
-    line-height: 0.94;
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
   }
 
   .cta__description {
-    max-width: 100%;
+    max-width: 620px;
 
     font-size: 1rem;
   }
 
   .cta__action {
-    padding-bottom: 0;
+    align-items: flex-start;
   }
 
-  .cta__visual {
-    right: -40px;
-    bottom: -80px;
-
-    width: 220px;
-    height: 220px;
-  }
-
-  .cta__visual-circle {
-    width: 120px;
-    height: 120px;
-  }
-
-  .cta__visual-arrow {
-    font-size: 5rem;
+  .cta__action-label {
+    text-align: left;
   }
 }
 
-@media (max-width: 500px) {
+/* MOBILE */
+
+@media (max-width: 600px) {
   .cta {
     gap: 2rem;
 
-    padding: 4rem 5%;
+    padding: 3.75rem 5%;
   }
 
   .cta__eyebrow {
@@ -203,31 +144,30 @@
   }
 
   .cta__action-label {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.55rem;
 
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 
   .cta__button {
-    min-height: 50px;
+    min-height: 48px;
 
-    padding: 0.9rem 1.3rem;
+    padding: 0.85rem 1.2rem;
+
+    font-size: 0.9rem;
+  }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 400px) {
+  .cta {
+    padding: 3.25rem 5%;
   }
 
-  .cta__visual {
-    right: -70px;
-    bottom: -95px;
+  .cta__button {
+    padding: 0.8rem 1rem;
 
-    width: 100px;
-    height: 100px;
-  }
-
-  .cta__visual-circle {
-    width: 100px;
-    height: 100px;
-  }
-
-  .cta__visual-arrow {
-    font-size: 4rem;
+    font-size: 0.85rem;
   }
 }
