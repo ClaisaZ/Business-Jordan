@@ -1,7 +1,7 @@
 ## Milestone A write-up: Business-Jordan
 
 ## Team: 
-Clayton Liang and Woo Sung
+Clayton Liang and WooSung Choi
 
 ## Live URL: 
 https://158.23.86.240 
