@@ -91,7 +91,7 @@ function page(title, body) {
 
 // ---------- Login routes ----------
 // Step 1: send the user to Google's sign-in page
-app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'], prompt: 'select_account' }));
 
 // Step 2: Google sends the user back here after they sign in (or cancel)
 app.get('/auth/google/callback',
@@ -130,6 +130,7 @@ app.get('/api/me', (req, res) => {
 
 // ---------- Login-only page ----------
 app.get('/members', requireLogin, (req, res) => {
+  res.set('Cache-Control', 'no-store');
   res.send(page('Members', `
     <h1>Welcome, ${escapeHtml(req.user.name)}</h1>
     <p>You're signed in with Google as <strong>${escapeHtml(req.user.email)}</strong>.</p>
