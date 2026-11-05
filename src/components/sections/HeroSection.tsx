@@ -33,9 +33,7 @@ function HeroSection() {
             className="hero__image"
           />
 
-          <div className="hero__hotspots">
-            {/* Future interactive body-part hotspots */}
-          </div>
+          <div className="hero__hotspots"></div>
         </div>
       </div>
 
