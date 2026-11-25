@@ -1,0 +1,6 @@
+# Business-Jordan: let imfile watch the PM2 log folder
+/ r,
+/var/ r,
+/var/log/ r,
+/var/log/bj-pm2/ r,
+/var/log/bj-pm2/** r,
